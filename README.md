@@ -11,10 +11,10 @@ After 4 years, I finally did the Snake game. Since I started programming (almost
 - [x]  Generic programming version
 - [ ]  Try to find a way to use less If statements
 - [ ]  Object Oriented Programming version
-- [ ] Remake everything from scratch if necessary
+- [ ] Remake everything from scratch if necessary  
 **Game stuff:**  
 - [ ] Collision with the borders of the window
-- [ ] Sound effects?
+- [ ] Sound effects?  
 **Optional:**  
 - [ ]  Terminal version using curses or another thing
 
