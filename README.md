@@ -3,7 +3,7 @@
 
 After 4 years, I finally did the Snake game. Since I started programming (almost 4 years ago), I dreamed of doing this game, but I never did it.
 
-![https://media.giphy.com/media/M8foUFlfR1nIsdvUsk/giphy.gif](https://media.giphy.com/media/M8foUFlfR1nIsdvUsk/giphy.gif)
+![demo](https://media.giphy.com/media/QfX2QFjuN2LfNGkWLa/giphy.gif)
 ---
 
 ## TO-DO list

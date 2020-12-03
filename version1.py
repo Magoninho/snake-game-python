@@ -35,7 +35,7 @@ LEFT = 3
 scale = settings['scale']
 snk_x = WIDTH / 4 // scale * scale
 snk_y = HEIGHT / 2 // scale * scale
-tamanho_inicial = settings['tamanho_inicial']
+initial_snake_size = settings['initial_snake_size']
 
 moving_to = RIGHT
 
@@ -44,8 +44,8 @@ morreu = False
 
 
 def cria_snake():
-    global tamanho_inicial, scale, snk_x, snk_y
-    for piece in range(tamanho_inicial):
+    global initial_snake_size, scale, snk_x, snk_y
+    for piece in range(initial_snake_size):
         snake.append([snk_x - scale * piece, snk_y])
 
 
@@ -53,8 +53,8 @@ cria_snake()
 
 
 def frutinha():
-    x = random.randint(0, WIDTH)
-    y = random.randint(0, HEIGHT)
+    x = random.randint(0, WIDTH-scale)
+    y = random.randint(0, HEIGHT-scale)
     return (x//scale * scale, y//scale * scale)
 
 
