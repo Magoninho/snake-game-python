@@ -1,0 +1,8 @@
+{
+    "scale" : 10,
+    "tamanho_inicial" : 5,
+    "fruit_color" : [0, 255, 255],
+    "frame_rate" : 15,
+    "song_path" : "./song2.wav",
+    "screen_size" : 300
+}

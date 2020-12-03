@@ -12,9 +12,11 @@ After 4 years, I finally did the Snake game. Since I started programming (almost
 - [ ]  Try to find a way to use less If statements
 - [ ]  Object Oriented Programming version
 - [ ] Remake everything from scratch if necessary  
+- [x] Add a settings.json to edit the settings of the game
 **Game stuff:**  
-- [ ] Collision with the borders of the window
-- [ ] Sound effects?  
+- [x] Collision with the borders of the window
+- [x] Scores
+- [x] Change the font
 **Optional:**  
 - [ ]  Terminal version using curses or another thing
 
