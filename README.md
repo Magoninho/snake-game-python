@@ -30,7 +30,7 @@ After 4 years, I finally did the Snake game. Since I started programming (almost
 | R | restart when dead |
 
 ### Extra info
-Made with Python 3.6.9 64 bit on Linux
-Using Visual Studio Code
-Modules required:
+Made with Python 3.6.9 64 bit on Linux  
+Using Visual Studio Code  
+Modules required:  
  - Pygame : `pip install pygame`
