@@ -1,4 +1,4 @@
-﻿﻿# Simple Snake Game with Python
+# Simple Snake Game with Python
 
 After 4 years, I finally did the Snake game. Since I started programming (almost 4 years ago), I dreamed of doing this game, but I never did it.
 
