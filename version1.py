@@ -72,10 +72,13 @@ def main():
 
         SCREEN.fill((0, 0, 0))
 
-        for square in range(len(snake) - 1, 0, -1):  # fiquei preso aqui por um tempo k
+        for square in range(len(snake) - 1, 0, -1):  # got stuck here a little bit
             snake[square] = [snake[square-1][0], snake[square-1][1]]
         keys = pygame.key.get_pressed()
 
+        """
+        omg a lot of if statements :O
+        """
         if keys[pygame.K_UP]:
             moving_to = UP
         if keys[pygame.K_DOWN]:
@@ -93,7 +96,8 @@ def main():
         if moving_to == DOWN:
             snake[0] = [snake[0][0], snake[0][1] + scale]
 
-        # deixando o corpo da cobra grudado com a cabeça kkkkk
+
+        # making the head stay with the body
         for body in range(len(snake)):
 
             pygame.draw.rect(SCREEN, (WHITE),
@@ -106,12 +110,12 @@ def main():
             score()
 
         for i in range(len(snake) - 1, 0, -1):
-            # se a cobra colide com ela mesma
+            # if the snake collides with itself
             if snake[0] == snake[i]:
                 pygame.font.init()
                 font = pygame.font.SysFont("Arial", 24)
                 text = font.render(
-                    "Aperte R para recomeçar", False, (0, 255, 255))
+                    "Press R to respawn", False, (0, 255, 255))
                 SCREEN.blit(text, (0, 0))
                 morreu = True
                 while morreu:
