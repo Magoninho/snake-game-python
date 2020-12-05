@@ -1,7 +1,7 @@
 # Simple Snake Game with Python
 
-After 4 years, I finally did the Snake game. Since I started programming (almost 4 years ago), I dreamed of doing this game, but I never did it.
-
+After 4 years, I finally did the Snake game. Since I started programming (almost 4 years ago), I dreamed of doing this game, but I never did it.  
+Now the game has 2 versions: Procedural programming version, and Object Oriented Programming version.
 ![demo](https://media.giphy.com/media/QfX2QFjuN2LfNGkWLa/giphy.gif)
 ---
 
