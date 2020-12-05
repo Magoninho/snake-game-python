@@ -1,8 +1,9 @@
 {
     "scale" : 10,
-    "initial_snake_size" : 5,
-    "fruit_color" : [0, 255, 255],
+    "initial_snake_size" : 1,
+    "fruit_color" : [255, 0, 255],
+    "snake_color" : [255, 255, 255],
     "frame_rate" : 15,
-    "song_path" : "./song2.wav",
+    "song_path" : "./song.ogg",
     "screen_size" : 300
 }

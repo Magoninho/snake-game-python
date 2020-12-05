@@ -73,6 +73,8 @@ def main():
     scr = 0
 
     clock = pygame.time.Clock()
+
+    # the main game loop
     while True:
         clock.tick(settings['frame_rate'])
         for event in pygame.event.get():
@@ -116,7 +118,7 @@ def main():
         # making the head stay with the body
         for body in range(len(snake)):
 
-            pygame.draw.rect(SCREEN, (WHITE),
+            pygame.draw.rect(SCREEN, settings['snake_color'],
                              (snake[body][0], snake[body][1], scale, scale))
 
         pygame.draw.rect(SCREEN, fruit_color,
@@ -129,20 +131,19 @@ def main():
         """
         MAKE THE SNAKE COMEBACK WHEN GOING THROUGH THE WALL
         """
+        if snake[0][0] > WIDTH - scale:
+            snake[0][0] = 0
+
+        if snake[0][0] < 0:
+            snake[0][0] = WIDTH - scale
+
+        if snake[0][1] > HEIGHT - scale:
+            snake[0][1] = 0
+
+        if snake[0][1] < 0:
+            snake[0][1] = HEIGHT - scale
+
         for i in range(len(snake) - 1, 0, -1):
-
-            if snake[0][0] > WIDTH - scale:
-                snake[0][0] = 0
-
-            if snake[0][0] < 0:
-                snake[0][0] = WIDTH - scale
-
-            if snake[0][1] > HEIGHT - scale:
-                snake[0][1] = 0
-
-            if snake[0][1] < 0:
-                snake[0][1] = HEIGHT - scale
-
             # if the snake collides with itself
             if snake[0] == snake[i]:
                 pygame.font.init()
