@@ -9,18 +9,16 @@ Now the game has 2 versions: Procedural programming version, and Object Oriented
 ## TO-DO list
 **Code:**  
 - [x]  Generic programming version
-- [ ]  ~~Try to find a way to use less If statements~~
 - [x]  Object Oriented Programming version
-- [ ] ~~Remake everything from scratch if necessary~~  
 - [x] Add a settings.json to edit the settings of the game  
+- [x] Comment the code
+
+
 
 **Game stuff:**  
 - [x] Collision with the borders of the window
 - [x] Scores
 - [x] Change the font  
-
-**Optional:**  
-- [ ]  Terminal version using curses or another thing  
 
 ## How to change game settings
 In the folder, there is a file called `settings.json`. Inside of this file, there are settings that can be changed.
@@ -31,6 +29,7 @@ In the folder, there is a file called `settings.json`. Inside of this file, ther
 - `"frame_rate" : 15` - This changes the framerate of the game. the higher, the faster.
 - `"song_path" : "./song2.wav"` - This is the place where you can change the song that is played. There is 2 songs in the main directory: `song.ogg` and `song2.wav`. `song.ogg` is a song from Super Mario Land and `song2.wav` is just a song that I found on the https://modarchive.org/ called "android - city of the night".
 - `"screen_size" : 300` - This setting changes the width of the screen. Don't worry about the height because the game has an aspect ratio.
+- `"collide_on_walls" : false"` - Change if the player will lose if it collides with the walls or not (this option is only available for the object oriented version yet)
 
 ## Controls
 |Key  | command |
@@ -40,6 +39,7 @@ In the folder, there is a file called `settings.json`. Inside of this file, ther
 | ← | left |
 | → | right |
 | R | restart when dead |
+
 
 ### Extra info
 Made with Python 3.6.9 64 bit on Linux  

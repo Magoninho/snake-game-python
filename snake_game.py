@@ -3,20 +3,18 @@ import json
 from pygame.locals import *
 import random
 
-settings = None
-"""
-OPENING THE SETTINGS FILE
-"""
+# Opening the settings.json file
 with open('./settings.json') as f:
     settings = json.load(f)
 
 pygame.init()
 
+# initializing the pygame mixer
 pygame.mixer.init(44000, -16, 1, 1024)
 pygame.mixer.music.load(settings['song_path'])
 pygame.mixer.music.play(-1)
 
-
+# some constants
 WIDTH = settings['screen_size']
 HEIGHT = int(WIDTH / 4 * 4)
 SCREEN = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -31,27 +29,27 @@ RIGHT = 1
 DOWN = 2
 LEFT = 3
 
-# snake stuff
+# snake configurations
 scale = settings['scale']
 snk_x = WIDTH / 4 // scale * scale
 snk_y = HEIGHT / 2 // scale * scale
 initial_snake_size = settings['initial_snake_size']
 
-moving_to = RIGHT
+moving_to = RIGHT # initial direction
 
-snake = []
+snake = [] # the snake body
 morreu = False
+
 
 
 def cria_snake():
     global initial_snake_size, scale, snk_x, snk_y
     for piece in range(initial_snake_size):
         snake.append([snk_x - scale * piece, snk_y])
-
-
+# creating the snake
 cria_snake()
 
-
+# creating the fruit
 def frutinha():
     x = random.randint(0, WIDTH-scale)
     y = random.randint(0, HEIGHT-scale)
@@ -60,23 +58,23 @@ def frutinha():
 
 def score():
     global posicao_f
-    snake.append([snk_x, snk_y])
-    posicao_f = frutinha()
+    snake.append([snk_x, snk_y]) # appending to the snake body
+    posicao_f = frutinha() # gets a new position for the fruit
 
 
-posicao_f = frutinha()
+posicao_f = frutinha() # sets a initial value for the fruit
 
 
 def main():
     global snake, moving_to
 
-    scr = 0
+    scr = 0 # score
 
     clock = pygame.time.Clock()
 
     # the main game loop
     while True:
-        clock.tick(settings['frame_rate'])
+        clock.tick(settings['frame_rate']) # sets the limit of framerate with the setting on setting.json
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -130,7 +128,9 @@ def main():
 
         """
         MAKE THE SNAKE COMEBACK WHEN GOING THROUGH THE WALL
+        collide_on_walls option not available because the developer is lazy
         """
+
         if snake[0][0] > WIDTH - scale:
             snake[0][0] = 0
 
@@ -142,6 +142,7 @@ def main():
 
         if snake[0][1] < 0:
             snake[0][1] = HEIGHT - scale
+
 
         for i in range(len(snake) - 1, 0, -1):
             # if the snake collides with itself
@@ -171,3 +172,11 @@ def main():
 
 
 main()
+
+"""
+Feito com carinho,
+por Magoninho
+
+Made with love,
+by Magoninho
+"""
